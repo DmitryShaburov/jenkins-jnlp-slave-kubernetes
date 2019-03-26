@@ -3,7 +3,8 @@ USER root
 ARG KUBECTL_VERSION=v1.13.2
 ARG HELM_VERSION=v2.12.3
 RUN apt-get update \
-    && apt-get -y install gettext-base \
+    && apt-get -y install ca-certificates gettext-base certbot python3-pip \
+    && pip3 install certbot-dns-route53 ansible \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && curl -LO https://storage.googleapis.com/kubernetes-release/release/$KUBECTL_VERSION/bin/linux/amd64/kubectl \
