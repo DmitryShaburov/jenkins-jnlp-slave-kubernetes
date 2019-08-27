@@ -1,9 +1,9 @@
-FROM jenkins/jnlp-slave:3.27-1
+FROM jenkins/jnlp-slave:3.29-1
 USER root
 ARG KUBECTL_VERSION=v1.13.2
 ARG HELM_VERSION=v2.12.3
 RUN apt-get update \
-    && apt-get -y install ca-certificates gettext-base certbot python3-pip \
+    && apt-get -y install curl ca-certificates gettext-base certbot python3-pip s3cmd mysql-client-5.7 \
     && pip3 install certbot-dns-route53 ansible \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
