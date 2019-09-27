@@ -2,7 +2,7 @@ FROM jenkins/jnlp-slave:3.29-1
 USER root
 ARG KUBECTL_VERSION=v1.13.2
 ARG HELM_VERSION=v2.14.3
-RUN apt-key adv --keyserver pgp.mit.edu --recv-keys 5072E1F5 \
+RUN apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys 5072E1F5 \
     && apt-get update \
     && apt-get -y install software-properties-common \
     && add-apt-repository 'deb http://repo.mysql.com/apt/debian stretch mysql-5.7' \
