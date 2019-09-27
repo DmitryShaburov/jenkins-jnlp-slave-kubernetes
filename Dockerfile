@@ -1,4 +1,4 @@
-FROM jenkins/jnlp-slave:3.29-1
+FROM jenkins/jnlp-slave:3.35-4
 USER root
 ARG KUBECTL_VERSION=v1.13.2
 ARG HELM_VERSION=v2.14.3
