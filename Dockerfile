@@ -8,7 +8,7 @@ RUN apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys 5072E1F5 \
     && add-apt-repository 'deb http://repo.mysql.com/apt/debian stretch mysql-5.7' \
     && apt-get update \
     && apt-get -y install curl ca-certificates gettext-base certbot \
-                  python3-pip s3cmd  mysql-community-client \
+                  python3-pip s3cmd  mysql-community-client redis-server \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && pip3 install certbot-dns-route53 ansible==2.7.13 \
